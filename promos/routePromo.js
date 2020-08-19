@@ -15,11 +15,11 @@ const init = async () => {
         method: 'GET',
         path: '/api/v2/corezoid/promo',
 
-        handler: indexController.getPharmaciesIdBalance,
+        handler: indexController.getPromosFromSite,
         options: {
             auth: false,
-            description: `Товарные остатки в аптеке`,
-            notes: `По коду аптеки (id) получить ненулевые товарные остатки`,
+            description: `Акции с сайта`,
+            notes: `Акции с сайта`,
             tags: ['api', ' '],
             plugins: {
                 good: {
@@ -32,11 +32,7 @@ const init = async () => {
             },
             validate: {
 
-                query: {
-                    offset: Joi.number().integer().min(0).default(0),
-                    limit: Joi.number().integer().min(1).default(100)
-                        .example(100),
-                },
+
             }
         }
     });
