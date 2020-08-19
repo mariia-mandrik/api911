@@ -1,7 +1,7 @@
 // /////////////////////////////////////////////////////////////////////////////
-// ТЕКУЩИЕ ОСТАТКИ В АПТЕКЕ getPharmaciesIdBalance
+// ПРОМОКОДЫ ПО НОМЕРУ ТЕЛЕФОНА getPromocodes
 // /////////////////////////////////////////////////////////////////////////////
-async function getPharmaciesIdBalance(objArgs) {
+async function getPromocodes(objArgs) {
     const { pharmacyId, offset = 0, limit = DEFAULT_PHARMACY_BALANCE } = objArgs;
 
     try {
