@@ -12,7 +12,7 @@ controllers.getProductsDetailSimple = async (req, h) => {
         throw Boom.badRequest('No result');
     } catch (err) {
         console.error(`:ERROR get pharmacy id ${pharmacyId} balance failed! ${moment().format()} ${err}`);
-        return h.response({ ...err, message: `:ERROR get pharmacy id ${pharmacyId} balance failed!` }).code((err.output && err.output.statusCode) || 499);
+        return h.response({ ...err, message: `:ERROR get pharmacy id ${pharmacyId} failed!` }).code((err.output && err.output.statusCode) || 499);
     }
 };
 
